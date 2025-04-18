@@ -1,10 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body{
     background-color: #223047;
     
 }
 
-h1{
-    color: #F9E5C1;
-    font-size: 2em;
-    text-align: center;
+header{
+    background-image: url(image/background.svg);
+    height: 100vh;
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imagePP{
+    height: 30vh;
+    border: solid 5px #223047;
+    border-radius: 50%;
 }

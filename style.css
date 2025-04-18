@@ -1,6 +1,5 @@
 body{
     background-color: #223047;
-    margin: 0;
 }
 
 header{
@@ -15,4 +14,15 @@ header{
     height: 35vh;
     border: solid 5px #223047;
     border-radius: 50%;
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex
+;
+    flex-wrap: wrap;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
 }

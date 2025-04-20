@@ -32,3 +32,13 @@ header{
     width: 33.333333%;
     max-width: 33.333333%;
 }
+
+.card{
+    background-color: #2B4362;
+    border: none;
+}
+
+.boxfooter{
+    background-color: #2B4362;!important
+    
+}

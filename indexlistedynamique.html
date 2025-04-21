@@ -11,9 +11,11 @@
     <div class="container mt-5 text-light">
         <h1>Ma liste dynamique</h1>
         <form id="itemForm" class="mb-3">
-            <div class="input-group">
-                <input type="text" id="itemInput" class="form-control" placeholder="Nouvel élément" required>
-                <button id="ajouter" type="submit" class="btn btn-primary">Ajouter</button>
+            <div class="input-group-lg">
+                <input type="text" id="itemInput" style="text-align: center;" class="form-control" placeholder="Nouvel élément" required>
+            </div>
+            <div style="display: flex; justify-content: center;">
+                <button id="ajouter" type="submit" class="btn btn-primary btn-lg">Ajouter</button>
             </div>
         </form>
         <ul id="itemList" class="list-group">

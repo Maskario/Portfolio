@@ -5,63 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeu Plus ou Moins</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
-<body>
-    <div class="container mt-5 text-center">
+<body style="height: 93vh; background: url('image/background.svg') no-repeat center center / cover;">
+    <div class="container mt-5 text-center text-light ">
         <h1>Jeu Plus ou Moins</h1>
-        <div class="d-flex flex-wrap justify-content-center gap-2 my-3">
-            <button type="button" class="btn btn-info guess-btn">0</button>
-            <button type="button" class="btn btn-info guess-btn">1</button>
-            <button type="button" class="btn btn-info guess-btn">2</button>
-            <button type="button" class="btn btn-info guess-btn">3</button>
-            <button type="button" class="btn btn-info guess-btn">4</button>
-            <button type="button" class="btn btn-info guess-btn">5</button>
-            <button type="button" class="btn btn-info guess-btn">6</button>
-            <button type="button" class="btn btn-info guess-btn">7</button>
-            <button type="button" class="btn btn-info guess-btn">8</button>
-            <button type="button" class="btn btn-info guess-btn">9</button>
-            <button type="button" class="btn btn-info guess-btn">10</button>
+        <div class="d-flex flex-wrap justify-content-center gap-2 my-3 ">
+            <button type="button" class="btn btn-secondary guess-btn btn-lg">0</button>
+            <button type="button" class="btn btn-secondary guess-btn btn-lg">1</button>
+            <button type="button" class="btn btn-secondary guess-btn btn-lg">2</button>
+            <button type="button" class="btn btn-secondary guess-btn btn-lg">3</button>
+            <button type="button" class="btn btn-secondary guess-btn btn-lg">4</button>
+            <button type="button" class="btn btn-secondary guess-btn btn-lg">5</button>
+            <button type="button" class="btn btn-secondary guess-btn btn-lg">6</button>
+            <button type="button" class="btn btn-secondary guess-btn btn-lg">7</button>
+            <button type="button" class="btn btn-secondary guess-btn btn-lg">8</button>
+            <button type="button" class="btn btn-secondary guess-btn btn-lg">9</button>
+            <button type="button" class="btn btn-secondary guess-btn btn-lg">10</button>
         </div>
 
         <div id="résultat">
-            <p id="plus" class="d-none rounded border p-2 bg-danger">C'est plus</p>
-            <p id="moins" class="d-none rounded border p-2 bg-primary">C'est moins</p>
+            <p id="plus" class="d-none rounded border p-2 bg-danger border-0">C'est plus</p>
+            <p id="moins" class="d-none rounded border p-2 bg-primary border-0">C'est moins</p>
         </div>
         <div id="Win">
-            <p id="MsgWin" class="d-none rounded border p-2 bg-success text-white">Bravo ! Vous avez trouvé le bon nombre ! Vous pouvez rejouer !</p>
+            <p id="MsgWin" class="d-none rounded border p-2 bg-success border-0 text-white">Bravo ! Vous avez trouvé le bon nombre ! Vous pouvez rejouer !</p>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        let nb = Math.floor(Math.random() * 11); // Nombre entre 0 et 10
-        console.log("Nombre à deviner :", nb);
-
-        document.querySelectorAll('.guess-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                let userNumber = parseInt(this.textContent, 10);
-                let plus = document.getElementById("plus");
-                let moins = document.getElementById("moins");
-                let MsgWin = document.getElementById("MsgWin");
-
-                plus.classList.add("d-none");
-                moins.classList.add("d-none");
-                MsgWin.classList.add("d-none");
-
-                if (userNumber < nb) {
-                    plus.classList.remove("d-none");
-                } else if (userNumber > nb) {
-                    moins.classList.remove("d-none");
-                } else {
-                    MsgWin.classList.remove("d-none");
-                    setTimeout(() => {
-                        nb = Math.floor(Math.random() * 11);
-                        console.log("Nouveau nombre à deviner :", nb);
-                    }, 1000);
-                }
-            });
-        });
-    </script>
+    <a href="index.html#Mini_projets" id="backToTop" class="position-fixed top-0 start-0 m-4 text-white bg-transparent border-0 fs-3" style="box-shadow: none; outline: none;">
+        <i class="bi bi-arrow-left"></i>
+    </a>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    let nb = Math.floor(Math.random() * 11); // Nombre entre 0 et 10
+    console.log("Nombre à deviner :", nb);
+
+    document.querySelectorAll('.guess-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            let userNumber = parseInt(this.textContent, 10);
+            let plus = document.getElementById("plus");
+            let moins = document.getElementById("moins");
+            let MsgWin = document.getElementById("MsgWin");
+
+            plus.classList.add("d-none");
+            moins.classList.add("d-none");
+            MsgWin.classList.add("d-none");
+
+            if (userNumber < nb) {
+                plus.classList.remove("d-none");
+            } else if (userNumber > nb) {
+                moins.classList.remove("d-none");
+            } else {
+                MsgWin.classList.remove("d-none");
+                setTimeout(() => {
+                    nb = Math.floor(Math.random() * 11);
+                    console.log("Nouveau nombre à deviner :", nb);
+                }, 1000);
+            }
+        });
+    });
+</script>
 </html>

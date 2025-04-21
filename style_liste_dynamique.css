@@ -1,3 +1,7 @@
+body{
+    background-color: #223047;
+}
+
 .custom-box {
     border: 2px solid rgba(0, 0, 0, 0.486); 
     padding: 15px;

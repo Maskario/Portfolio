@@ -10,13 +10,13 @@
 </head>
 <body class="d-flex justify-content-center align-items-center vh-100 bg-dark-subtle" style="height: 100vh; background: url('image/background.svg') no-repeat center center / cover;">
     <div class="fondCompteur container p-3 rounded" style="width: 800px;">
-        <h4 class="text-white mb-2">Calculateur de Remise</h4>
+        <h4 class="text-white mb-2">Discount Calculator</h4>
 
         <div class="mt-3"></div>
 
         <div class="col-12 row g-3">
             <div class="col-10">
-                <input type="number" id="Prixdebase" class="form-control text-start mb-2 fs-4 w-100" placeholder="Entrer le prix initial du produit">
+                <input type="number" id="Prixdebase" class="form-control text-start mb-2 fs-4 w-100" placeholder="Initial price of the product">
             </div>
         </div>
 
@@ -24,7 +24,7 @@
 
         <div class="col-12 row g-3">
             <div class="col-10">
-                <input type="number" id="Pourcentage_de_remise" class="form-control text-start mb-2 fs-4 w-100" placeholder="Entrer le pourcentage de remise">
+                <input type="number" id="Pourcentage_de_remise" class="form-control text-start mb-2 fs-4 w-100" placeholder="Discount percentage">
             </div>
             <div class="col-2">
                 <button class="btn btn-success w-100 mb-2 fs-4" onclick="afficherValeurs()()">OK</button>
@@ -33,7 +33,7 @@
 
         <div class="mt-4"></div>
 
-        <h4 class="text-white mb-2">Votre Résultat : </h4>
+        <h4 class="text-white mb-2">Result : </h4>
 
         <div class="col-12 row justify-content-center">
             <div class="col-12">
@@ -45,7 +45,7 @@
 
         <div class="col-12 row g-4 justify-content-center">
             <div class="col-6">
-                <button class="btn btn-primary w-100 mb-2 fs-4" onclick="calculerPrixAvecRemise()">Calculer</button>
+                <button class="btn btn-primary w-100 mb-2 fs-4" onclick="calculerPrixAvecRemise()">Calculate</button>
             </div>
             <div class="col-6">
                 <button class="btn btn-danger w-100 mb-2 fs-4 text-center" onclick="clearFields()">Clear</button>
@@ -64,7 +64,7 @@
     let remise = document.getElementById("Pourcentage_de_remise").value;
 
     // Afficher les valeurs saisies dans le champ résultat
-        document.getElementById("result").value = `Prix: ${prixInitial} €, Remise: ${remise} %`;
+        document.getElementById("result").value = `Price: ${prixInitial} € , Discount: ${remise} %`;
     }
 
     //Ensuite on récupère ce qui est afficher dans le résultat pour le calculer
@@ -76,7 +76,7 @@
 
         // Vérifier si les champs sont remplis
         if (prixInitial.trim() === "" || remise.trim() === "") {
-            document.getElementById("result").value = "Veuillez entrer des valeurs valides.";
+            document.getElementById("result").value = "Please enter valid values.";
             return;
         }
 
@@ -84,7 +84,7 @@
         let prixFinal = prixInitial - (prixInitial * remise / 100);
 
         // Afficher le prix après remise dans le champ résultat
-        document.getElementById("result").value = `Prix après remise : ${prixFinal.toFixed(2)} €`;
+        document.getElementById("result").value = `Price after discount : ${prixFinal.toFixed(2)} €`;
     }
 
     function clearFields() {

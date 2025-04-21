@@ -19,6 +19,7 @@
             <button type="button" class="btn btn-info btn-lg px-5 py-2 fs-3" onclick="changerCouleur('cyan')">Cyan</button>
             <button type="button" class="btn btn-light btn-lg px-5 py-2 fs-3" onclick="changerCouleur('blanc')">White</button>
             <button type="button" class="btn btn-dark btn-lg px-5 py-2 fs-3" onclick="changerCouleur('noir', 'white')">Black</button>
+            <button type="button" class="btn btn-lg px-5 py-2 fs-3" style="background-color: #223047 ; color: white;" onclick="changerCouleur('originale', 'white')">Original</button>
         </div>
     </div>
     <a href="index.html#Mini_projets" id="backToTop" class="position-fixed top-0 start-0 m-4 text-white bg-transparent border-0 fs-3" style="box-shadow: none; outline: none;">
@@ -28,10 +29,20 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
     function changerCouleur(nom, texte = 'black') {
-        const body = document.getElementById("body");
-        const nomFichier = `Couleur ${nom}.svg`;
-        body.style.background = `url('image/${nomFichier}') no-repeat center center / cover`;
-        document.getElementById("titre").style.color = texte;
+    const body = document.getElementById("body");
+    const imageName = `Couleur ${nom}.svg`;
+    const imagePath = `image/${imageName}`;
+
+    // Appliquer le fond et la couleur du texte
+    body.style.background = `url('${imagePath}') no-repeat center center / cover`;
+    document.getElementById("titre").style.color = texte;
+
+    // Sauvegarder la couleur sélectionnée
+    localStorage.setItem('couleurTheme', nom);
+    localStorage.setItem('textColor', texte);
     }
+
+    
+
     </script>
 </html> 

@@ -11,7 +11,7 @@
     
 </head>
 <body>
-    <header id="top" class="text-light d-flex align-items-center" style="height: 100vh; background: url('image/background.svg') no-repeat center center / cover;">
+  <header id="top" class="text-light d-flex align-items-center" style="height: 100vh;">
       <div class="container">
         <div class="row align-items-center">
           
@@ -51,7 +51,7 @@
             <p>A collection of small coding projects to experiment and learn.</p>
           </div>
           <div class="row g-3 mb-3 justify-content-center">
-            <div class="col-sm-4 mb-3 mb-sm-0 ">
+            <div class="col-sm-4 mb-3 mb-sm-0">
               <div class="card shadow text-light text-center">
                 <div class="card-body">
                   <h5 class="card-title">Calculator</h5>
@@ -94,7 +94,7 @@
         </div>
       </section>
       <section id="projects">
-        <div class="row g-3 mb-3 justify-content-center">
+        <div class="row g-3  justify-content-center">
           <div class="col-sm-4 mb-3 mb-sm-0 ">
             <div class="card shadow text-light text-center">
               <div class="card-body">
@@ -116,7 +116,7 @@
         </div>
       </section>
     </main>
-    <footer class="d-flex flex-column text-light" style="height: 100vh; background: url('image/background rotated.svg') no-repeat center center / cover; padding-top: 90px;">
+    <footer class=" d-flex flex-column text-light" style="height: 100vh; padding-top: 90px;">
       <div id="Gros_projet"></div>
       <div class="mt-auto text-center">
         <h2>Big project</h2>
@@ -153,5 +153,53 @@
       backToTopBtn.style.display = "none";
     }
   });
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const couleur = localStorage.getItem('couleurTheme') || 'originale';
+    const texte = localStorage.getItem('textColor') || 'black';
+
+    const header = document.getElementById('top');
+    const footer = document.querySelector('footer');
+    const main = document.querySelector('main');
+
+    // Met à jour l'image du header
+    if (header) {
+        const headerImage = `image/Couleur ${couleur}.svg`;
+        header.style.background = `url('${headerImage}') no-repeat center center / cover`;
+    }
+
+    // Met à jour l'image du footer (version reverse)
+    if (footer) {
+        const footerImage = `image/Couleur ${couleur}reverse.svg`;
+        footer.style.background = `url('${footerImage}') no-repeat center center / cover`;
+    }
+
+    // Facultatif : couleur unie ou autre style pour le <main>
+    if (main) {
+        // Tu peux personnaliser en fonction de chaque couleur
+        let mainBgColor = 'transparent';
+        switch (couleur) {
+            case 'bleu': mainBgColor = '#003366'; break;
+            case 'rouge': mainBgColor = '#8A0100'; break;
+            case 'vert': mainBgColor = '#155A33'; break;
+            case 'gris': mainBgColor = '#D2D3D2'; break;
+            case 'cyan': mainBgColor = '#E1FFFE'; break;
+            case 'jaune': mainBgColor = '#D4A301'; break;
+            case 'noir': mainBgColor = '#010100'; break;
+            case 'blanc': mainBgColor = '#F4F4F5'; break;
+            default: mainBgColor = '#223047'; // couleur originale
+        }
+
+        main.style.backgroundColor = mainBgColor;
+    }
+  });
+  document.addEventListener('DOMContentLoaded', () => {
+  const couleur = localStorage.getItem('couleurTheme') || 'originale';
+  
+  const body = document.body;
+  body.classList.add(`theme-${couleur}`);
+  });
+
+
 </script>
 </html>

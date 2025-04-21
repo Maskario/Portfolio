@@ -1,6 +1,3 @@
-body{
-    background-color: #223047;
-}
 
 header{
     background-image: url(image/background.svg);
@@ -33,36 +30,86 @@ header{
     max-width: 33.333333%;
 }
 
-.card{
-    background-color: #2B4362;
-    border: none;
-}
-
-.boxfooter{
-    background-color: #2B4362;
-    
-}
 
 html {
     scroll-behavior: smooth;
   }  
 
-.bouton_top{
+/* CORRIGÉ: theme-original */
+.theme-originale .card {
+    background-color: #283F5D;
+    border: none;
+    color: #ffffff;
+  }
+  
+  .theme-originale .bouton_top {
+    background-color: #293B56;
+    border: none;
+    color: #ffffff;
+  }
+  
+  .theme-originale .bouton_top:hover {
+    background-color: #25344D;
+    border: none;
+    color: #ffffff;
+  }
+  
+  .theme-originale .bouton_milieu {
+    background-color:  #273B57;
+    border: none;
+    color: #ffffff;
+  }
+  
+  .theme-originale .bouton_milieu:hover {
+    background-color: #223047;
+    border: none;
+    color: #ffffff;
+  }
+  
+  .theme-originale .boxfooter {
+    background-color: #2B4362;
+    color: #ffffff;
+  }
+
+/* CORRIGÉ: theme-original */
+.theme-originale .card {
     background-color: #2B4362;
     border: none;
-}
-
-.bouton_top:hover {
-    background-color: #223047; 
-}
-
-.bouton_milieu{
+    color: #ffffff;
+  }
+  
+  .theme-originale .bouton_top {
     background-color: #273B57;
     border: none;
-}
-
-.bouton_milieu:hover{
+    color: #ffffff;
+  }
+  
+  .theme-originale .bouton_top:hover {
     background-color: #223047;
-}
+    border: none;
+    color: #ffffff;
+  }
+  
+  .theme-originale .bouton_milieu {
+    background-color: #223047;
+    border: none;
+    color: #ffffff;
+  }
+  
+  .theme-originale .bouton_milieu:hover {
+    background-color: #273B57;
+    border: none;
+    color: #ffffff;
+  }
+  
+  .theme-rouge .boxfooter {
+    background-color: #2B4362;
+    color: #ffffff;
+  }
+  
 
+
+
+  /* Ajoute les autres thèmes pareil : .theme-bleu, .theme-vert, etc. */
+  
 

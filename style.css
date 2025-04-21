@@ -39,6 +39,30 @@ header{
 }
 
 .boxfooter{
-    background-color: #2B4362;!important
+    background-color: #2B4362;
     
 }
+
+html {
+    scroll-behavior: smooth;
+  }  
+
+.bouton_top{
+    background-color: #2B4362;
+    border: none;
+}
+
+.bouton_top:hover {
+    background-color: #223047; 
+}
+
+.bouton_milieu{
+    background-color: #273B57;
+    border: none;
+}
+
+.bouton_milieu:hover{
+    background-color: #223047;
+}
+
+

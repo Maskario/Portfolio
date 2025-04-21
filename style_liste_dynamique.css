@@ -1,0 +1,21 @@
+.custom-box {
+    border: 2px solid rgba(0, 0, 0, 0.486); 
+    padding: 15px;
+    margin: 10px ;
+    border-radius: 5px;
+    background-color: #f8f9fa; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    font-size: 20px;
+}
+
+.btn {
+    cursor: pointer; 
+}
+
+
+
+h1{
+    text-align: center;
+}

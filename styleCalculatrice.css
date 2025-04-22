@@ -56,9 +56,13 @@
     color: #2C2C2C;
 }
 
+.theme-blanc .flèche{
+    color: #2C2C2C;
+  }
+
 .theme-noir .fondcalculatrice{
     background-color: #262726;
-    border : 2px solid #262726;
+    border : 2px solid white;
 }
 .theme-noir .titre{
     color: white;

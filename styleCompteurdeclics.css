@@ -43,6 +43,7 @@
 
 .theme-blanc .boutoncolor{
     background-color: #E7E7E6;
+    border: 3px solid #CFCFCF;
     color: #2C2C2C;
 }
 .theme-blanc .titre{
@@ -55,9 +56,10 @@
 
 .theme-noir .boutoncolor{
     background-color: #262726;
-    border : 2px solid white;
+    border : 3px solid white;
     color: white;
 }
+
 .theme-noir .titre{
     color: white;
 }

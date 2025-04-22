@@ -1,3 +1,65 @@
-.fondcalculatrice{
-    background-color: #2B4362;
+.theme-originale .fondcalculatrice{
+    background-color: #283F5D; 
+}
+.theme-originale .titre{
+    color: white;
+}
+
+.theme-bleu .fondcalculatrice{
+    background-color: #85B6CC;
+}
+.theme-bleu .titre{
+    color: white;
+}
+
+.theme-gris .fondcalculatrice{
+    background-color: #D2D3D2;
+}
+.theme-gris .titre{
+    color: white;
+}
+
+.theme-vert .fondcalculatrice{
+    background-color: #8AC988;
+}
+.theme-vert .titre{
+    color: white;
+}
+
+.theme-rouge .fondcalculatrice{
+    background-color: #E8855E;
+}
+.theme-rouge .titre{
+    color: white;
+}
+
+.theme-jaune .fondcalculatrice{
+    background-color: #F7D457;
+}
+.theme-jaune .titre{
+    color: white;
+}
+
+.theme-cyan .fondcalculatrice{
+    background-color: #96D1D0;
+    border: 2px solid #E1FFFE;
+}
+.theme-cyan .titre{
+    color: #2C2C2C;
+}
+
+.theme-blanc .fondcalculatrice{
+    background-color: #E7E7E6;
+    border: 2px solid #E1E0E0;
+}
+.theme-blanc .titre{
+    color: #2C2C2C;
+}
+
+.theme-noir .fondcalculatrice{
+    background-color: #262726;
+    border : 2px solid #262726;
+}
+.theme-noir .titre{
+    color: white;
 }

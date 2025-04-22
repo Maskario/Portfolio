@@ -1,35 +1,26 @@
-
-header{
-    background-image: url(image/background.svg);
-    height: 100vh;
-    width: auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .imagePP{
     height: 35vh;
     border: solid 5px #223047;
     border-radius: 50%;
 }
 
-.row {
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
-    display: flex
-;
-    flex-wrap: wrap;
-    margin-top: 0;
-    margin-right: 0;
-    margin-left: 0;
+.card {
+  height: 100%;
 }
 
-.col-4 {
-    flex: 0 0 auto;
-    width: 33.333333%;
-    max-width: 33.333333%;
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* espace entre le haut et le bas */
+  height: 100%;
 }
 
+
+.equal-height {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
 html {
     scroll-behavior: smooth;
@@ -278,7 +269,7 @@ html {
 .theme-cyan .bouton_top:hover {
   background-color:  #E1FFFE;
   border: none;
-  color: #03045e;
+  color: #2C2C2C;
 }
 
 .theme-cyan .bouton_milieu {
@@ -290,7 +281,7 @@ html {
 .theme-cyan .bouton_milieu:hover {
   background-color: #E1FFFE;
   border: none;
-  color: #ffffff;
+  color: #2C2C2C;
 }
 
 .theme-cyan .boxfooter {
@@ -298,78 +289,131 @@ html {
   color: #ffffff;
 }
 
+.theme-cyan .titre_grosprojet{
+  color: #2C2C2C;
+}
+
+.theme-cyan .Text_Titre{
+  color: #2C2C2C;
+}
+
+.theme-cyan h1{
+  color: #2C2C2C;
+}
+
+.theme-cyan .flèche{
+  color: #2C2C2C;
+}
+
 /* CORRIGÉ: theme-blanc */
 
 
 .theme-blanc .card {
-  background-color: #DCAE20;
+  background-color: #E1E0E0;
   border: none;
-  color: #ffffff;
+  color: #2C2C2C;
+}
+
+.theme-blanc .card-title{
+  color: #2C2C2C;
+}
+
+.theme-blanc .card-text{
+  color: #2C2C2C;
 }
 
 .theme-blanc .bouton_top {
-  background-color: #E4BB35;
+  background-color: #E7E7E6;
   border: none;
-  color: #ffffff;
+  color: #2C2C2C;
 }
 
 .theme-blanc .bouton_top:hover {
-  background-color:  #D4A301;
+  background-color:  #F4F4F5;
   border: none;
-  color: #ffffff;
+  color: #2C2C2C;
 }
 
 .theme-blanc .bouton_milieu {
-  background-color: #E4BB35;
+  background-color: #E7E7E6;
   border: none;
-  color: #ffffff;
+  color: #2C2C2C;
 }
 
 .theme-blanc .bouton_milieu:hover {
-  background-color: #D4A301;
+  background-color: #F4F4F5;
   border: none;
-  color: #ffffff;
+  color: #2C2C2C;
 }
 
 .theme-blanc .boxfooter {
-  background-color: #DCAE20;
+  background-color: #E7E7E6;
   color: #ffffff;
+}
+
+.theme-blanc .titre_miniprojet{
+  color: #2C2C2C;
+}
+
+.theme-blanc .titre_grosprojet{
+  color: #2C2C2C;
+}
+
+.theme-blanc .titreBoxgrosprojet{
+  color: #2C2C2C;
+}
+
+.theme-blanc .Text_Titre{
+  color: #2C2C2C;
+}
+
+.theme-blanc h1{
+  color: #2C2C2C;
+}
+
+.theme-blanc .Copyrightbottom{
+  color: #2C2C2C;
+}
+
+.theme-blanc .flèche{
+  color: #2C2C2C;
 }
 
 /* CORRIGÉ: theme-noir */
 
 
 .theme-noir .card {
-  background-color: #DCAE20;
+  background-color: #1F1F1F;
   border: none;
   color: #ffffff;
 }
 
 .theme-noir .bouton_top {
-  background-color: #E4BB35;
+  background-color: #161617;
   border: none;
   color: #ffffff;
 }
 
 .theme-noir .bouton_top:hover {
-  background-color:  #D4A301;
+  background-color:  #010100;
   border: none;
   color: #ffffff;
 }
 
 .theme-noir .bouton_milieu {
-  background-color: #E4BB35;
+  background-color: #161617;
   border: none;
   color: #ffffff;
 }
 
 .theme-noir .bouton_milieu:hover {
-  background-color: #D4A301;
+  background-color: #010100;
   border: none;
   color: #ffffff;
 }
 
 .theme-noir .boxfooter {
-  background-color: #DCAE20;
+  background-color: #1F1F1F;
   color: #ffffff;
 }
+

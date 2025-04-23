@@ -6,33 +6,36 @@
     <title>Jeu Plus ou Moins</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="height: 100vh; background: url('image/background.svg') no-repeat center center / cover;display: flex ; flex-direction: column; justify-content: center;">
-    <div class=" mt-5 text-center text-light" style="margin-bottom: 100px;">
-        <h1>More or less ?</h1>
-        <div class="d-flex flex-wrap justify-content-center gap-2 my-3 ">
-            <button type="button" class="btn btn-secondary guess-btn btn-lg">0</button>
-            <button type="button" class="btn btn-secondary guess-btn btn-lg">1</button>
-            <button type="button" class="btn btn-secondary guess-btn btn-lg">2</button>
-            <button type="button" class="btn btn-secondary guess-btn btn-lg">3</button>
-            <button type="button" class="btn btn-secondary guess-btn btn-lg">4</button>
-            <button type="button" class="btn btn-secondary guess-btn btn-lg">5</button>
-            <button type="button" class="btn btn-secondary guess-btn btn-lg">6</button>
-            <button type="button" class="btn btn-secondary guess-btn btn-lg">7</button>
-            <button type="button" class="btn btn-secondary guess-btn btn-lg">8</button>
-            <button type="button" class="btn btn-secondary guess-btn btn-lg">9</button>
-            <button type="button" class="btn btn-secondary guess-btn btn-lg">10</button>
-        </div>
-        <div style="padding-left: 475px ; padding-right: 475px;">
-            <div id="résultat">
-                <p id="plus" class="d-none rounded border p-2 bg-danger border-0">It's more</p>
-                <p id="moins" class="d-none rounded border p-2 bg-primary border-0">It's less</p>
+<body style="height: 100vh; display: flex ; flex-direction: column; justify-content: center;">
+    <header id="top">
+        <div class=" mt-5 text-center text-light" style="margin-bottom: 100px;">
+            <h1>More or less ?</h1>
+            <div class="d-flex flex-wrap justify-content-center gap-2 my-3 ">
+                <button type="button" class="btn btn-secondary guess-btn btn-lg">0</button>
+                <button type="button" class="btn btn-secondary guess-btn btn-lg">1</button>
+                <button type="button" class="btn btn-secondary guess-btn btn-lg">2</button>
+                <button type="button" class="btn btn-secondary guess-btn btn-lg">3</button>
+                <button type="button" class="btn btn-secondary guess-btn btn-lg">4</button>
+                <button type="button" class="btn btn-secondary guess-btn btn-lg">5</button>
+                <button type="button" class="btn btn-secondary guess-btn btn-lg">6</button>
+                <button type="button" class="btn btn-secondary guess-btn btn-lg">7</button>
+                <button type="button" class="btn btn-secondary guess-btn btn-lg">8</button>
+                <button type="button" class="btn btn-secondary guess-btn btn-lg">9</button>
+                <button type="button" class="btn btn-secondary guess-btn btn-lg">10</button>
             </div>
-            <div id="Win">
-                <p id="MsgWin" class="d-none rounded border p-2 bg-success border-0 text-white">Congratulations ! You found the right number ! You can play again !</p>
+            <div style="padding-left: 475px ; padding-right: 475px;">
+                <div id="résultat">
+                    <p id="plus" class="d-none rounded border p-2 bg-danger border-0">It's more</p>
+                    <p id="moins" class="d-none rounded border p-2 bg-primary border-0">It's less</p>
+                </div>
+                <div id="Win">
+                    <p id="MsgWin" class="d-none rounded border p-2 bg-success border-0 text-white">Congratulations ! You found the right number ! You can play again !</p>
+                </div>
             </div>
         </div>
-    </div>
+    </header>
     <a href="index.html#Mini_projets" id="backToTop" class="position-fixed top-0 start-0 m-4 text-white bg-transparent border-0 fs-3" style="box-shadow: none; outline: none;">
         <i class="bi bi-arrow-left"></i>
     </a>
@@ -65,6 +68,17 @@
                 }, 1000);
             }
         });
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+    const couleur = localStorage.getItem('couleurTheme') || 'originale';
+    
+    // Ajoute la classe au body pour activer le thème dans le CSS
+    document.body.classList.add(`theme-${couleur}`);
+
+    // Optionnel : image de fond dynamique (si tu en veux une aussi)
+    const bodyImage = `image/Couleur ${couleur}.svg`;
+    document.body.style.background = `url('${bodyImage}') no-repeat center center / cover`;
     });
 </script>
 </html>

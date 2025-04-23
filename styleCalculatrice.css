@@ -37,10 +37,6 @@
 .theme-rouge .titre{
     color: white;
 }
-.theme-rouge .bouton_border{
-    border : 3px solid #8A0100;
-    border-radius: 10px;
-}
 
 .theme-jaune .fondcalculatrice{
     background-color: #F7D457;

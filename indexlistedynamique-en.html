@@ -10,17 +10,17 @@
 <body style="background-color:#223047;">
     <header id="top" class="d-flex justify-content-center vh-100 bg-dark-subtle" style="height: 100vh; background: url('image/background.svg') no-repeat center center / cover;">
         <div class="container mt-5 text-light">
-            <h1>Liste dynamique</h1>
+            <h1>Dynamic list</h1>
             <form id="itemForm" class="mb-3" style="margin-left: 150px; margin-right: 150px;">
                 <div class="input-group-lg">
-                    <input type="text" id="itemInput" style="text-align: center;"  class="form-control" placeholder="Nouvel article" required autocomplete="off">
+                    <input type="text" id="itemInput" style="text-align: center;"  class="form-control" placeholder="New item" required autocomplete="off">
                 </div>
                 <div style="display: flex; justify-content: center; margin-top: 10px;">
-                    <button id="ajouter" type="submit" class="btn btn-primary btn-lg" style="padding-left: 50px; padding-right: 50px;">Ajouter</button>
+                    <button id="ajouter" type="submit" class="btn btn-primary btn-lg" style="padding-left: 50px; padding-right: 50px;">Add</button>
                 </div>
             </form>
             <div class="text-center mt-4">
-                <button id="downloadBtn" class="btn btn-secondary">Télécharger la liste</button>
+                <button id="downloadBtn" class="btn btn-secondary">Download list</button>
             </div>  
             <ul id="itemList" class="list-group">
             </ul>          
@@ -60,7 +60,7 @@ document.getElementById('itemForm').addEventListener('submit', function(event) {
         li.classList.add('list-group-item', 'custom-box');
 
         let deleteButton = document.createElement('button');
-        deleteButton.textContent = 'SUPPRIMER';
+        deleteButton.textContent = 'DELETE';
         deleteButton.classList.add('btn', 'btn-danger', 'ml-2');
 
         li.appendChild(deleteButton);

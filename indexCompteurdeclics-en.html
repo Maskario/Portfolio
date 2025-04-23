@@ -11,7 +11,7 @@
 <body class="vh-100 d-flex justify-content-center align-items-center">
     <header id="top">
         <div class="d-flex flex-column justify-content-center align-items-center vh-100 text-light">
-            <h1>Compteur de clics</h1>
+            <h1>Click counter</h1>
             <button type="button" class="boutoncolor btn btn-lg px-5 py-2 fs-1" onclick="incrementer()" id="compteur">0</button>
         </div>
         <a href="index.html#Mini_projets" id="backToTop" class="position-fixed top-0 start-0 m-4 text-white bg-transparent border-0 fs-3" style="box-shadow: none; outline: none;">
@@ -35,34 +35,34 @@ function incrementer() {
     const messageDiv = document.getElementById("messageDiv");
     
     if (count === 10) {
-        messageDiv.textContent = "C'est déjà 10 ? Tu es un champion du clic !";
+        messageDiv.textContent = "Already 10? You’re a click champion!";
         messageDiv.classList.remove("d-none");
     } else if (count === 25) {
-        messageDiv.textContent = "Wow, tu n'arrêtes jamais ! Tu veux peut-être un café ?";
+        messageDiv.textContent = "Wow, you just don’t stop! Want a coffee?";
         messageDiv.classList.remove("d-none");
     } else if (count === 50) {
-        messageDiv.textContent = "Félicitations ! Tu as atteint 50 clics, mais je suis curieux… Tu veux encore continuer ?";
+        messageDiv.textContent = "Congratulations! You’ve reached 50 clicks, but I’m curious… Do you want to keep going?";
         messageDiv.classList.remove("d-none");
     } else if (count === 100) {
-        messageDiv.textContent = "100 clics ! Si ça continue, on va devoir te donner une médaille.";
+        messageDiv.textContent = "100 clicks! If this keeps going, we might need to give you a medal.";
         messageDiv.classList.remove("d-none");
     } else if (count === 150) {
-        messageDiv.textContent = "Tu as atteint 150 clics ! Tu deviens une légende.";
+        messageDiv.textContent = "You’ve hit 150 clicks! You’re becoming a legend.";
         messageDiv.classList.remove("d-none");
     } else if (count === 250) {
-        messageDiv.textContent = "250 clics... T'as vraiment de la volonté ! Tu veux un cookie maintenant ?";
+        messageDiv.textContent = "250 clicks… You’ve got some serious willpower! Want a cookie now?";
         messageDiv.classList.remove("d-none");
     } else if (count === 500) {
-        messageDiv.textContent = "500 clics ! T'es sérieux là ? C'est du grand art !";
+        messageDiv.textContent = "500 clicks! Are you serious? This is art!";
         messageDiv.classList.remove("d-none");
     } else if (count === 1000) {
-        messageDiv.textContent = "1000 clics ! Ok, là tu es officiellement un pro.";
+        messageDiv.textContent = "1000 clicks! Okay, now you’re officially a pro.";
         messageDiv.classList.remove("d-none");
     } else if (count === 5000) {
-        messageDiv.textContent = "5000 clics, tu es un véritable héros des clics. Chapeau bas !";
+        messageDiv.textContent = "5000 clicks! You’re a true click hero. Hats off!";
         messageDiv.classList.remove("d-none");
     } else if (count === 10000) {
-        messageDiv.textContent = "Tu as cliqué 10 000 fois... Bon, là c'est limite inquiétant, tu veux un break ? 😂";
+        messageDiv.textContent = "You’ve clicked 10,000 times... Okay, this is getting a little concerning, do you want a break?";
         messageDiv.classList.remove("d-none");
     }
 }
